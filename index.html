@@ -7,6 +7,7 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
 
+
 :root {
   --orange:      #f7521e;
   --orange-mid:  #e8491a;
@@ -30,6 +31,7 @@
   font-family: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
 body {
@@ -39,6 +41,7 @@ body {
   font-size: 17px;
   overflow-x: hidden;
 }
+
 
 /* ── NAV ── */
 nav {
@@ -65,6 +68,7 @@ nav {
   background: var(--grad); transition: opacity .15s;
 }
 .nav-cta:hover { opacity: 0.88; }
+
 
 /* ── HERO ── */
 .hero {
@@ -95,6 +99,7 @@ nav {
 .btn-grad { background: var(--grad); color: #fff; }
 .btn-outline { background: transparent; color: var(--orange); border: 2px solid var(--orange); }
 
+
 /* ── PHONE SECTION ── */
 .phone-section {
   background: var(--grad);
@@ -109,6 +114,7 @@ nav {
 .section-title.light { color: #fff; }
 .section-sub { font-size: 17px; max-width: 480px; margin: 0 auto 56px; line-height: 1.6; }
 .section-sub.light { color: rgba(255,255,255,0.82); }
+
 
 /* iPhone */
 .iphone-wrap { display: inline-block; }
@@ -126,12 +132,14 @@ nav {
 .status-icons { display:flex; align-items:center; gap:6px; }
 .app-content { flex:1; display:flex; flex-direction:column; background:#000; }
 
+
 .chat-header { display:flex; align-items:center; padding:8px 14px 10px; border-bottom:1px solid rgba(255,255,255,0.07); gap:10px; flex-shrink:0; }
 .chat-back { color:#f7521e; font-size:12px; display:flex; align-items:center; gap:3px; white-space:nowrap; }
 .chat-group-icon { width:36px; height:36px; border-radius:50%; background:linear-gradient(135deg,#f7521e,#7b3bbf); display:flex; align-items:center; justify-content:center; font-size:17px; flex-shrink:0; }
 .chat-header-info { flex:1; min-width:0; }
 .chat-group-name { font-size:13px; font-weight:600; color:#fff; letter-spacing:-0.15px; }
 .chat-group-members { font-size:10px; color:rgba(255,255,255,0.4); margin-top:1px; }
+
 
 .messages { flex:1; padding:12px 12px 6px; display:flex; flex-direction:column; gap:10px; overflow:hidden; }
 .msg-time-label { font-size:10px; color:rgba(255,255,255,0.28); text-align:center; }
@@ -143,14 +151,17 @@ nav {
 .bubble.from { background:#2c2c2e; color:#fff; border-bottom-left-radius:4px; }
 .bubble.to { background:linear-gradient(135deg,#f7521e,#7b3bbf); color:#fff; border-bottom-right-radius:4px; }
 
+
 .compose-bar { display:flex; align-items:center; gap:8px; padding:8px 12px 10px; background:rgba(28,28,30,0.97); border-top:1px solid rgba(255,255,255,0.05); flex-shrink:0; }
 .compose-input { flex:1; height:30px; background:#2c2c2e; border-radius:15px; padding:0 12px; font-size:12px; color:rgba(255,255,255,0.28); display:flex; align-items:center; }
 .compose-send { width:28px; height:28px; border-radius:50%; background:linear-gradient(135deg,#f7521e,#7b3bbf); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+
 
 .tab-bar { display:flex; padding:8px 0 20px; border-top:1px solid rgba(255,255,255,0.07); background:rgba(28,28,30,0.96); flex-shrink:0; }
 .tab { flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; }
 .tab-label { font-size:9px; color:rgba(255,255,255,0.32); font-weight:600; }
 .tab.active .tab-label { color:#f7521e; }
+
 
 /* ── FEATURES ── */
 .features { padding: 80px 24px; max-width: 980px; margin: 0 auto; }
@@ -167,6 +178,7 @@ nav {
 }
 .feat h3 { font-size:17px; font-weight:800; margin-bottom:8px; color: var(--text); }
 .feat p { font-size:14px; color:var(--text-2); line-height:1.6; }
+
 
 /* ── HOW IT WORKS ── */
 .how {
@@ -191,6 +203,7 @@ nav {
 }
 .step h3 { font-size:17px; font-weight:800; margin-bottom:8px; color:var(--text); }
 .step p { font-size:14px; color:var(--text-2); line-height:1.6; }
+
 
 /* ── LAUNCH ── */
 .launch-wrap { padding:80px 24px; }
@@ -224,6 +237,7 @@ nav {
 .req-text span { font-size:13px; color:rgba(255,255,255,0.72); line-height:1.5; }
 .cohort-note { margin-top:28px; padding-top:22px; border-top:1px solid rgba(255,255,255,0.2); font-size:13px; color:rgba(255,255,255,0.72); }
 .cohort-note strong { display:block; font-size:36px; font-weight:900; letter-spacing:-0.05em; color:#fff; line-height:1; margin-bottom:4px; }
+
 
 /* ── PRICING ── */
 .pricing-wrap { background: var(--bg-2); padding:80px 24px; border-top:1px solid var(--border-light); }
@@ -264,6 +278,7 @@ nav {
   background:var(--grad); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
 }
 
+
 /* ── CTA / SIGNUP SECTION ── */
 .cta {
   padding: 100px 24px;
@@ -279,6 +294,7 @@ nav {
   max-width: 440px; margin: 0 auto 48px; line-height: 1.55;
 }
 
+
 /* ── SIGNUP FORM ── */
 .signup-card {
   background: rgba(255,255,255,0.12);
@@ -293,28 +309,34 @@ nav {
   box-shadow: 0 32px 80px rgba(0,0,0,0.2);
 }
 
+
 .signup-card h3 {
   font-size: 20px; font-weight: 900; color: #fff;
   margin-bottom: 6px; letter-spacing: -0.3px;
 }
+
 
 .signup-card .form-sub {
   font-size: 13px; color: rgba(255,255,255,0.72);
   margin-bottom: 28px; line-height: 1.5;
 }
 
+
 .form-row {
   display: flex; flex-direction: column; gap: 14px;
 }
+
 
 .form-group {
   display: flex; flex-direction: column; gap: 6px;
 }
 
+
 .form-label {
   font-size: 11px; font-weight: 800; letter-spacing: 0.08em;
   text-transform: uppercase; color: rgba(255,255,255,0.8);
 }
+
 
 .form-input,
 .form-select {
@@ -334,12 +356,14 @@ nav {
   appearance: none;
 }
 
+
 .form-input::placeholder { color: rgba(255,255,255,0.4); }
 .form-input:focus,
 .form-select:focus {
   border-color: rgba(255,255,255,0.65);
   background: rgba(255,255,255,0.22);
 }
+
 
 .form-select option { background: #7b3bbf; color: #fff; }
 .form-select-wrap { position: relative; }
@@ -348,6 +372,7 @@ nav {
   position: absolute; right: 14px; top: 50%; transform: translateY(-50%);
   color: rgba(255,255,255,0.6); pointer-events: none; font-size: 14px;
 }
+
 
 .form-submit {
   margin-top: 6px;
@@ -369,6 +394,7 @@ nav {
 .form-submit:active { transform: translateY(0); }
 .form-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
 
+
 /* Success state */
 .signup-success {
   display: none;
@@ -378,6 +404,7 @@ nav {
   padding: 16px 0 8px;
 }
 
+
 .success-icon {
   width: 64px; height: 64px; border-radius: 50%;
   background: rgba(255,255,255,0.2);
@@ -386,21 +413,26 @@ nav {
   font-size: 28px;
 }
 
+
 .success-title {
   font-size: 22px; font-weight: 900; color: #fff;
   margin-bottom: 8px; letter-spacing: -0.3px;
 }
 
+
 .success-sub {
   font-size: 14px; color: rgba(255,255,255,0.78); line-height: 1.55;
 }
+
 
 /* Error message */
 .form-error {
   font-size: 12px; color: #ffd4c0; margin-top: 4px; display: none;
 }
 
+
 .cta-note { margin-top: 24px; font-size: 12px; color: rgba(255,255,255,0.5); }
+
 
 /* ── ADMIN PANEL ── */
 #admin-panel {
@@ -412,15 +444,18 @@ nav {
   padding: 40px 24px;
 }
 
+
 .admin-box {
   max-width: 900px; margin: 0 auto;
   background: #fff; border-radius: 24px; overflow: hidden;
 }
 
+
 .admin-header {
   background: var(--grad); padding: 24px 32px;
   display: flex; align-items: center; justify-content: space-between;
 }
+
 
 .admin-header h2 { font-size: 20px; font-weight: 900; color: #fff; }
 .admin-close {
@@ -430,11 +465,14 @@ nav {
   color: #fff; font-size: 18px; line-height: 1;
 }
 
+
 .admin-body { padding: 28px 32px; }
+
 
 .admin-stats {
   display: flex; gap: 16px; margin-bottom: 28px; flex-wrap: wrap;
 }
+
 
 .admin-stat {
   flex: 1; min-width: 120px;
@@ -442,14 +480,18 @@ nav {
   border: 1px solid var(--border-light);
 }
 
+
 .admin-stat-num {
   font-size: 32px; font-weight: 900; letter-spacing: -0.04em;
   background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
 }
 
+
 .admin-stat-label { font-size: 12px; color: var(--text-3); font-weight: 600; margin-top: 2px; }
 
+
 .admin-table-wrap { overflow-x: auto; border-radius: 14px; border: 1px solid var(--border-light); }
+
 
 table { width: 100%; border-collapse: collapse; font-size: 13px; }
 thead { background: var(--bg-2); }
@@ -458,9 +500,12 @@ td { padding: 13px 16px; color: var(--text); border-bottom: 1px solid var(--bord
 tr:last-child td { border-bottom: none; }
 tr:hover td { background: var(--bg-2); }
 
+
 .admin-empty { text-align: center; padding: 48px; color: var(--text-3); font-size: 15px; }
 
+
 .admin-actions { margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap; }
+
 
 .admin-btn {
   padding: 9px 18px; border-radius: 980px; font-size: 13px; font-weight: 700;
@@ -471,6 +516,7 @@ tr:hover td { background: var(--bg-2); }
 .admin-btn-outline { background: transparent; color: var(--orange); border: 2px solid var(--orange); }
 .admin-btn:hover { opacity: 0.85; }
 
+
 /* school badge */
 .school-badge {
   display: inline-block; padding: 3px 10px; border-radius: 980px;
@@ -478,6 +524,7 @@ tr:hover td { background: var(--bg-2); }
   background: linear-gradient(135deg, rgba(247,82,30,0.1), rgba(123,59,191,0.1));
   color: var(--purple);
 }
+
 
 /* ── FOOTER ── */
 footer {
@@ -490,12 +537,14 @@ footer {
 .footer-links a { font-size:12px; color:var(--text-3); text-decoration:none; font-weight:600; transition:color .15s; }
 .footer-links a:hover { color:var(--orange); }
 
+
 /* ── REVEAL ── */
 [data-r] { opacity:0; transform:translateY(24px); transition:opacity .65s cubic-bezier(.25,.46,.45,.94), transform .65s cubic-bezier(.25,.46,.45,.94); }
 [data-r].v { opacity:1; transform:none; }
 [data-r="1"] { transition-delay:.08s; }
 [data-r="2"] { transition-delay:.16s; }
 [data-r="3"] { transition-delay:.24s; }
+
 
 @media(max-width:768px){
   .nav-links { display:none; }
@@ -512,6 +561,7 @@ footer {
 </style>
 </head>
 <body>
+
 
 <!-- ADMIN PANEL (open with Ctrl+Shift+A) -->
 <div id="admin-panel">
@@ -546,6 +596,7 @@ footer {
   </div>
 </div>
 
+
 <!-- NAV -->
 <nav>
   <a href="#" class="nav-logo">LinkTeen</a>
@@ -558,6 +609,7 @@ footer {
   <a href="#join" class="nav-cta">Request Access</a>
 </nav>
 
+
 <!-- HERO -->
 <section class="hero">
   <span class="hero-eyebrow" data-r>RJUHSD &middot; Roseville Rising</span>
@@ -569,11 +621,13 @@ footer {
   </div>
 </section>
 
+
 <!-- PHONE SECTION -->
 <section class="phone-section">
   <span class="section-eyebrow" data-r>The platform</span>
   <h2 class="section-title light" data-r="1">Your interests.<br>Your community.</h2>
   <p class="section-sub light" data-r="2">Select STEM, business, medicine, law, or arts and join a live group with students who share your exact focus area.</p>
+
 
   <div class="iphone-wrap" data-r="3">
     <div class="iphone">
@@ -663,6 +717,7 @@ footer {
   </div>
 </section>
 
+
 <!-- FEATURES -->
 <section class="features" id="features">
   <div class="section-header" data-r>
@@ -694,6 +749,7 @@ footer {
   </div>
 </section>
 
+
 <!-- HOW IT WORKS -->
 <section class="how" id="how">
   <div class="how-inner">
@@ -718,6 +774,7 @@ footer {
     </div>
   </div>
 </section>
+
 
 <!-- LAUNCH -->
 <section class="launch-wrap" id="launch">
@@ -772,6 +829,7 @@ footer {
   </div>
 </section>
 
+
 <!-- PRICING -->
 <section class="pricing-wrap" id="pricing">
   <div class="pricing">
@@ -809,16 +867,19 @@ footer {
   </div>
 </section>
 
+
 <!-- CTA / SIGNUP -->
 <section class="cta" id="join">
   <h2 class="cta-title" data-r>Ready to find<br>your people?</h2>
   <p class="cta-sub" data-r="1">LinkTeen is in early access for RJUHSD students. Sign up below to join the founding cohort before we open to the public.</p>
 
+
   <div class="signup-card" data-r="2">
     <!-- Form -->
     <div id="signup-form-wrap">
       <h3>Request Early Access</h3>
-      <p class="form-sub">Spots are limited to the founding cohort of 400–600 students. We'll reach out with your invite.</p>
+      <p class="form-sub">Spots are limited to the founding cohort of 100 students. We'll reach out with your invite.</p>
+
 
       <div class="form-row">
         <div class="form-group">
@@ -826,6 +887,7 @@ footer {
           <input class="form-input" type="text" id="f-name" placeholder="First and last name" autocomplete="name">
           <span class="form-error" id="err-name">Please enter your full name.</span>
         </div>
+
 
         <div class="form-group">
           <label class="form-label" for="f-school">Your School</label>
@@ -844,11 +906,20 @@ footer {
           <span class="form-error" id="err-school">Please select your school.</span>
         </div>
 
+
+        <div class="form-group">
+          <label class="form-label" for="f-gpa">Weighted GPA</label>
+          <input class="form-input" type="number" id="f-gpa" placeholder="e.g. 4.3" step="0.01" min="0" max="5">
+          <span class="form-error" id="err-gpa">Please enter a valid GPA (0.0 – 5.0).</span>
+        </div>
+
+
         <div class="form-group">
           <label class="form-label" for="f-email">Email Address</label>
           <input class="form-input" type="email" id="f-email" placeholder="your@email.com" autocomplete="email">
           <span class="form-error" id="err-email">Please enter a valid email address.</span>
         </div>
+
 
         <div class="form-group">
           <label class="form-label" for="f-phone">Phone Number</label>
@@ -856,11 +927,13 @@ footer {
           <span class="form-error" id="err-phone">Please enter a valid phone number.</span>
         </div>
 
+
         <button class="form-submit" id="signup-btn" onclick="submitSignup()">
           Join the Founding Cohort →
         </button>
       </div>
     </div>
+
 
     <!-- Success -->
     <div class="signup-success" id="signup-success">
@@ -870,8 +943,10 @@ footer {
     </div>
   </div>
 
+
   <p class="cta-note" data-r="3">Currently available to Roseville Joint Union High School District students only</p>
 </section>
+
 
 <!-- FOOTER -->
 <footer>
@@ -883,33 +958,43 @@ footer {
   </div>
 </footer>
 
-<script>
-// ── Storage helpers ──────────────────────────────────────────────
-const STORAGE_KEY = 'linkteen-signups';
 
-async function getSignups() {
-  try {
-    const result = await window.storage.get(STORAGE_KEY, true);
-    return result ? JSON.parse(result.value) : [];
-  } catch { return []; }
-}
+<script>
+// ── Formspree endpoint ───────────────────────────────────────────
+// IMPORTANT: Replace the URL below with your own Formspree endpoint.
+// Sign up free at https://formspree.io → New Form → copy the endpoint URL.
+// It will look like: https://formspree.io/f/abcdefgh
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mkokvkja';
+
 
 async function saveSignup(entry) {
   try {
-    const existing = await getSignups();
-    existing.push(entry);
-    await window.storage.set(STORAGE_KEY, JSON.stringify(existing), true);
-    return true;
+    const response = await fetch(FORMSPREE_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(entry)
+    });
+    const data = await response.json();
+    return response.ok && data.ok !== false;
   } catch (e) {
-    console.error('Storage error:', e);
+    console.error('Submission error:', e);
     return false;
   }
 }
+
+
+// getSignups is kept so the admin panel doesn't crash,
+// but signups are now managed through your Formspree dashboard.
+async function getSignups() {
+  return [];
+}
+
 
 // ── Form validation ──────────────────────────────────────────────
 function showError(id, show) {
   document.getElementById(id).style.display = show ? 'block' : 'none';
 }
+
 
 function formatPhone(val) {
   const digits = val.replace(/\D/g, '');
@@ -918,42 +1003,55 @@ function formatPhone(val) {
   return val;
 }
 
+
 // Phone formatting on input
 document.getElementById('f-phone').addEventListener('input', function() {
   const digits = this.value.replace(/\D/g,'');
   if (digits.length >= 10) this.value = formatPhone(this.value);
 });
 
+
 // ── Submit ───────────────────────────────────────────────────────
 async function submitSignup() {
   const name  = document.getElementById('f-name').value.trim();
   const school = document.getElementById('f-school').value;
+  const gpa   = document.getElementById('f-gpa').value.trim();
   const email = document.getElementById('f-email').value.trim();
   const phone = document.getElementById('f-phone').value.trim();
 
+
   let valid = true;
+
 
   if (!name || name.split(' ').length < 2) { showError('err-name', true); valid = false; } else showError('err-name', false);
   if (!school) { showError('err-school', true); valid = false; } else showError('err-school', false);
+  const gpaNum = parseFloat(gpa);
+  if (!gpa || isNaN(gpaNum) || gpaNum < 0 || gpaNum > 5) { showError('err-gpa', true); valid = false; } else showError('err-gpa', false);
   if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showError('err-email', true); valid = false; } else showError('err-email', false);
   if (!phone || phone.replace(/\D/g,'').length < 10) { showError('err-phone', true); valid = false; } else showError('err-phone', false);
 
+
   if (!valid) return;
+
 
   const btn = document.getElementById('signup-btn');
   btn.disabled = true;
   btn.textContent = 'Submitting…';
 
+
   const entry = {
     id: Date.now(),
     name,
     school,
+    gpa: gpaNum,
     email,
     phone: formatPhone(phone),
     timestamp: new Date().toISOString()
   };
 
+
   const ok = await saveSignup(entry);
+
 
   if (ok) {
     document.getElementById('signup-form-wrap').style.display = 'none';
@@ -968,6 +1066,7 @@ async function submitSignup() {
   }
 }
 
+
 // ── Admin panel ──────────────────────────────────────────────────
 function openAdmin() {
   loadAdmin();
@@ -975,18 +1074,22 @@ function openAdmin() {
   document.body.style.overflow = 'hidden';
 }
 
+
 function closeAdmin() {
   document.getElementById('admin-panel').style.display = 'none';
   document.body.style.overflow = '';
 }
 
+
 async function loadAdmin() {
   const signups = await getSignups();
+
 
   // Stats
   const schoolCounts = {};
   signups.forEach(s => { schoolCounts[s.school] = (schoolCounts[s.school] || 0) + 1; });
   const topSchool = Object.entries(schoolCounts).sort((a,b) => b[1]-a[1])[0];
+
 
   document.getElementById('admin-stats').innerHTML = `
     <div class="admin-stat">
@@ -1003,14 +1106,17 @@ async function loadAdmin() {
     </div>
   `;
 
+
   const tbody = document.getElementById('admin-tbody');
   const empty = document.getElementById('admin-empty');
+
 
   if (signups.length === 0) {
     tbody.innerHTML = '';
     empty.style.display = 'block';
     return;
   }
+
 
   empty.style.display = 'none';
   tbody.innerHTML = signups.map((s, i) => `
@@ -1025,9 +1131,11 @@ async function loadAdmin() {
   `).join('');
 }
 
+
 function escHtml(str) {
   return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
+
 
 function formatDate(iso) {
   const d = new Date(iso);
@@ -1035,14 +1143,17 @@ function formatDate(iso) {
          ' ' + d.toLocaleTimeString('en-US', { hour:'numeric', minute:'2-digit' });
 }
 
+
 async function exportCSV() {
   const signups = await getSignups();
   if (!signups.length) { alert('No signups to export yet.'); return; }
+
 
   const header = ['#','Full Name','School','Email','Phone','Submitted'];
   const rows = signups.map((s, i) => [
     i + 1, s.name, s.school, s.email, s.phone, formatDate(s.timestamp)
   ]);
+
 
   const csv = [header, ...rows].map(r => r.map(c => `"${String(c).replace(/"/g,'""')}"`).join(',')).join('\n');
   const blob = new Blob([csv], { type: 'text/csv' });
@@ -1052,20 +1163,24 @@ async function exportCSV() {
   a.click(); URL.revokeObjectURL(url);
 }
 
+
 async function clearAll() {
-  await window.storage.set(STORAGE_KEY, JSON.stringify([]), true);
+  alert('Signups are now stored in your Formspree dashboard — visit formspree.io to manage them.');
   loadAdmin();
 }
+
 
 // Keyboard shortcut: Ctrl+Shift+A opens admin
 document.addEventListener('keydown', e => {
   if (e.ctrlKey && e.shiftKey && e.key === 'A') { e.preventDefault(); openAdmin(); }
 });
 
+
 // Click outside admin to close
 document.getElementById('admin-panel').addEventListener('click', function(e) {
   if (e.target === this) closeAdmin();
 });
+
 
 // ── Scroll reveal ────────────────────────────────────────────────
 const io = new IntersectionObserver(entries => {
