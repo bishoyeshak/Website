@@ -134,7 +134,7 @@ nav {
 .chat-group-members { font-size:10px; color:rgba(255,255,255,0.4); margin-top:1px; }
 
 .messages { flex:1; padding:12px 12px 6px; display:flex; flex-direction:column; gap:10px; overflow:hidden; }
-.msg-time { font-size:10px; color:rgba(255,255,255,0.28); text-align:center; }
+.msg-time-label { font-size:10px; color:rgba(255,255,255,0.28); text-align:center; }
 .msg-sender { font-size:10px; color:rgba(255,255,255,0.4); margin-left:30px; margin-bottom:2px; }
 .msg { display:flex; align-items:flex-end; gap:6px; }
 .msg.right { flex-direction:row-reverse; }
@@ -264,15 +264,220 @@ nav {
   background:var(--grad); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
 }
 
-/* ── CTA ── */
+/* ── CTA / SIGNUP SECTION ── */
 .cta {
-  padding:100px 24px; text-align:center;
+  padding: 100px 24px;
   background: var(--grad);
+  text-align: center;
 }
-.cta-title { font-size:clamp(36px,5.5vw,64px); font-weight:900; letter-spacing:-0.04em; line-height:1.05; margin-bottom:16px; color:#fff; }
-.cta-sub { font-size:17px; color:rgba(255,255,255,0.82); max-width:420px; margin:0 auto 40px; line-height:1.55; }
-.cta-note { margin-top:16px; font-size:12px; color:rgba(255,255,255,0.5); }
-.btn-white { background:#fff; color:var(--orange); font-weight:800; }
+.cta-title {
+  font-size: clamp(36px, 5.5vw, 64px); font-weight: 900;
+  letter-spacing: -0.04em; line-height: 1.05; margin-bottom: 12px; color: #fff;
+}
+.cta-sub {
+  font-size: 17px; color: rgba(255,255,255,0.85);
+  max-width: 440px; margin: 0 auto 48px; line-height: 1.55;
+}
+
+/* ── SIGNUP FORM ── */
+.signup-card {
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1.5px solid rgba(255,255,255,0.25);
+  border-radius: 28px;
+  padding: 44px 40px;
+  max-width: 520px;
+  margin: 0 auto;
+  text-align: left;
+  box-shadow: 0 32px 80px rgba(0,0,0,0.2);
+}
+
+.signup-card h3 {
+  font-size: 20px; font-weight: 900; color: #fff;
+  margin-bottom: 6px; letter-spacing: -0.3px;
+}
+
+.signup-card .form-sub {
+  font-size: 13px; color: rgba(255,255,255,0.72);
+  margin-bottom: 28px; line-height: 1.5;
+}
+
+.form-row {
+  display: flex; flex-direction: column; gap: 14px;
+}
+
+.form-group {
+  display: flex; flex-direction: column; gap: 6px;
+}
+
+.form-label {
+  font-size: 11px; font-weight: 800; letter-spacing: 0.08em;
+  text-transform: uppercase; color: rgba(255,255,255,0.8);
+}
+
+.form-input,
+.form-select {
+  width: 100%;
+  height: 46px;
+  background: rgba(255,255,255,0.15);
+  border: 1.5px solid rgba(255,255,255,0.2);
+  border-radius: 12px;
+  padding: 0 16px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  font-family: 'Nunito', sans-serif;
+  transition: border-color .15s, background .15s;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.form-input::placeholder { color: rgba(255,255,255,0.4); }
+.form-input:focus,
+.form-select:focus {
+  border-color: rgba(255,255,255,0.65);
+  background: rgba(255,255,255,0.22);
+}
+
+.form-select option { background: #7b3bbf; color: #fff; }
+.form-select-wrap { position: relative; }
+.form-select-wrap::after {
+  content: '▾';
+  position: absolute; right: 14px; top: 50%; transform: translateY(-50%);
+  color: rgba(255,255,255,0.6); pointer-events: none; font-size: 14px;
+}
+
+.form-submit {
+  margin-top: 6px;
+  width: 100%;
+  height: 50px;
+  background: #fff;
+  color: var(--orange);
+  border: none;
+  border-radius: 980px;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  font-family: 'Nunito', sans-serif;
+  letter-spacing: -0.2px;
+  transition: opacity .15s, transform .12s;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+}
+.form-submit:hover { opacity: 0.92; transform: translateY(-1px); }
+.form-submit:active { transform: translateY(0); }
+.form-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+/* Success state */
+.signup-success {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 16px 0 8px;
+}
+
+.success-icon {
+  width: 64px; height: 64px; border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 18px;
+  font-size: 28px;
+}
+
+.success-title {
+  font-size: 22px; font-weight: 900; color: #fff;
+  margin-bottom: 8px; letter-spacing: -0.3px;
+}
+
+.success-sub {
+  font-size: 14px; color: rgba(255,255,255,0.78); line-height: 1.55;
+}
+
+/* Error message */
+.form-error {
+  font-size: 12px; color: #ffd4c0; margin-top: 4px; display: none;
+}
+
+.cta-note { margin-top: 24px; font-size: 12px; color: rgba(255,255,255,0.5); }
+
+/* ── ADMIN PANEL ── */
+#admin-panel {
+  display: none;
+  position: fixed; inset: 0; z-index: 9999;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(8px);
+  overflow-y: auto;
+  padding: 40px 24px;
+}
+
+.admin-box {
+  max-width: 900px; margin: 0 auto;
+  background: #fff; border-radius: 24px; overflow: hidden;
+}
+
+.admin-header {
+  background: var(--grad); padding: 24px 32px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+
+.admin-header h2 { font-size: 20px; font-weight: 900; color: #fff; }
+.admin-close {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: rgba(255,255,255,0.2); border: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 18px; line-height: 1;
+}
+
+.admin-body { padding: 28px 32px; }
+
+.admin-stats {
+  display: flex; gap: 16px; margin-bottom: 28px; flex-wrap: wrap;
+}
+
+.admin-stat {
+  flex: 1; min-width: 120px;
+  background: var(--bg-2); border-radius: 16px; padding: 18px 20px;
+  border: 1px solid var(--border-light);
+}
+
+.admin-stat-num {
+  font-size: 32px; font-weight: 900; letter-spacing: -0.04em;
+  background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+
+.admin-stat-label { font-size: 12px; color: var(--text-3); font-weight: 600; margin-top: 2px; }
+
+.admin-table-wrap { overflow-x: auto; border-radius: 14px; border: 1px solid var(--border-light); }
+
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+thead { background: var(--bg-2); }
+th { padding: 12px 16px; text-align: left; font-size: 11px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-3); white-space: nowrap; border-bottom: 1px solid var(--border-light); }
+td { padding: 13px 16px; color: var(--text); border-bottom: 1px solid var(--border-light); vertical-align: top; }
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: var(--bg-2); }
+
+.admin-empty { text-align: center; padding: 48px; color: var(--text-3); font-size: 15px; }
+
+.admin-actions { margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap; }
+
+.admin-btn {
+  padding: 9px 18px; border-radius: 980px; font-size: 13px; font-weight: 700;
+  cursor: pointer; font-family: 'Nunito', sans-serif; transition: opacity .15s;
+  border: none;
+}
+.admin-btn-grad { background: var(--grad); color: #fff; }
+.admin-btn-outline { background: transparent; color: var(--orange); border: 2px solid var(--orange); }
+.admin-btn:hover { opacity: 0.85; }
+
+/* school badge */
+.school-badge {
+  display: inline-block; padding: 3px 10px; border-radius: 980px;
+  font-size: 11px; font-weight: 700;
+  background: linear-gradient(135deg, rgba(247,82,30,0.1), rgba(123,59,191,0.1));
+  color: var(--purple);
+}
 
 /* ── FOOTER ── */
 footer {
@@ -301,10 +506,45 @@ footer {
   .launch { grid-template-columns:1fr; gap:40px; }
   .pricing-grid { grid-template-columns:1fr; max-width:100%; }
   footer { flex-direction:column; gap:12px; text-align:center; }
+  .signup-card { padding: 32px 24px; }
+  .admin-body { padding: 20px; }
 }
 </style>
 </head>
 <body>
+
+<!-- ADMIN PANEL (open with Ctrl+Shift+A) -->
+<div id="admin-panel">
+  <div class="admin-box">
+    <div class="admin-header">
+      <h2>LinkTeen — Early Access Signups</h2>
+      <button class="admin-close" onclick="closeAdmin()">×</button>
+    </div>
+    <div class="admin-body">
+      <div class="admin-stats" id="admin-stats"></div>
+      <div class="admin-table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Full Name</th>
+              <th>School</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Submitted</th>
+            </tr>
+          </thead>
+          <tbody id="admin-tbody"></tbody>
+        </table>
+        <div class="admin-empty" id="admin-empty" style="display:none">No signups yet. Share the page to start collecting!</div>
+      </div>
+      <div class="admin-actions">
+        <button class="admin-btn admin-btn-grad" onclick="exportCSV()">Export CSV</button>
+        <button class="admin-btn admin-btn-outline" onclick="if(confirm('Clear ALL signups? This cannot be undone.')) clearAll()">Clear All</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- NAV -->
 <nav>
@@ -360,7 +600,7 @@ footer {
             </div>
           </div>
           <div class="messages">
-            <div class="msg-time">Today 9:38 AM</div>
+            <div class="msg-time-label">Today 9:38 AM</div>
             <div>
               <div class="msg-sender">Priya M. &middot; Granite Bay</div>
               <div class="msg">
@@ -569,11 +809,67 @@ footer {
   </div>
 </section>
 
-<!-- CTA -->
+<!-- CTA / SIGNUP -->
 <section class="cta" id="join">
   <h2 class="cta-title" data-r>Ready to find<br>your people?</h2>
-  <p class="cta-sub" data-r="1">LinkTeen is in early access for RJUHSD students. Apply to join the founding cohort before we open to the public.</p>
-  <a href="mailto:hello@linkteen.com" class="btn btn-white" data-r="2">Request early access</a>
+  <p class="cta-sub" data-r="1">LinkTeen is in early access for RJUHSD students. Sign up below to join the founding cohort before we open to the public.</p>
+
+  <div class="signup-card" data-r="2">
+    <!-- Form -->
+    <div id="signup-form-wrap">
+      <h3>Request Early Access</h3>
+      <p class="form-sub">Spots are limited to the founding cohort of 400–600 students. We'll reach out with your invite.</p>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="f-name">Full Name</label>
+          <input class="form-input" type="text" id="f-name" placeholder="First and last name" autocomplete="name">
+          <span class="form-error" id="err-name">Please enter your full name.</span>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="f-school">Your School</label>
+          <div class="form-select-wrap">
+            <select class="form-select" id="f-school">
+              <option value="" disabled selected>Select your high school</option>
+              <option value="Antelope High School">Antelope High School</option>
+              <option value="Granite Bay High School">Granite Bay High School</option>
+              <option value="Oakmont High School">Oakmont High School</option>
+              <option value="Roseville High School">Roseville High School</option>
+              <option value="Roseville Pathways">Roseville Pathways</option>
+              <option value="West Park High School">West Park High School</option>
+              <option value="Woodcreek High School">Woodcreek High School</option>
+            </select>
+          </div>
+          <span class="form-error" id="err-school">Please select your school.</span>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="f-email">Email Address</label>
+          <input class="form-input" type="email" id="f-email" placeholder="your@email.com" autocomplete="email">
+          <span class="form-error" id="err-email">Please enter a valid email address.</span>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="f-phone">Phone Number</label>
+          <input class="form-input" type="tel" id="f-phone" placeholder="(555) 000-0000" autocomplete="tel">
+          <span class="form-error" id="err-phone">Please enter a valid phone number.</span>
+        </div>
+
+        <button class="form-submit" id="signup-btn" onclick="submitSignup()">
+          Join the Founding Cohort →
+        </button>
+      </div>
+    </div>
+
+    <!-- Success -->
+    <div class="signup-success" id="signup-success">
+      <div class="success-icon">🎉</div>
+      <div class="success-title">You're on the list!</div>
+      <p class="success-sub">We'll reach out to <strong id="success-name"></strong> at <strong id="success-email"></strong> when LinkTeen opens for your school. Welcome to the founding cohort.</p>
+    </div>
+  </div>
+
   <p class="cta-note" data-r="3">Currently available to Roseville Joint Union High School District students only</p>
 </section>
 
@@ -583,11 +879,195 @@ footer {
   <div class="footer-links">
     <a href="#">Privacy</a>
     <a href="#">Terms</a>
-    <a href="#">Contact</a>
+    <a href="#" onclick="openAdmin(); return false;">Contact</a>
   </div>
 </footer>
 
 <script>
+// ── Storage helpers ──────────────────────────────────────────────
+const STORAGE_KEY = 'linkteen-signups';
+
+async function getSignups() {
+  try {
+    const result = await window.storage.get(STORAGE_KEY, true);
+    return result ? JSON.parse(result.value) : [];
+  } catch { return []; }
+}
+
+async function saveSignup(entry) {
+  try {
+    const existing = await getSignups();
+    existing.push(entry);
+    await window.storage.set(STORAGE_KEY, JSON.stringify(existing), true);
+    return true;
+  } catch (e) {
+    console.error('Storage error:', e);
+    return false;
+  }
+}
+
+// ── Form validation ──────────────────────────────────────────────
+function showError(id, show) {
+  document.getElementById(id).style.display = show ? 'block' : 'none';
+}
+
+function formatPhone(val) {
+  const digits = val.replace(/\D/g, '');
+  if (digits.length === 10) return `(${digits.slice(0,3)}) ${digits.slice(3,6)}-${digits.slice(6)}`;
+  if (digits.length === 11 && digits[0] === '1') return `+1 (${digits.slice(1,4)}) ${digits.slice(4,7)}-${digits.slice(7)}`;
+  return val;
+}
+
+// Phone formatting on input
+document.getElementById('f-phone').addEventListener('input', function() {
+  const digits = this.value.replace(/\D/g,'');
+  if (digits.length >= 10) this.value = formatPhone(this.value);
+});
+
+// ── Submit ───────────────────────────────────────────────────────
+async function submitSignup() {
+  const name  = document.getElementById('f-name').value.trim();
+  const school = document.getElementById('f-school').value;
+  const email = document.getElementById('f-email').value.trim();
+  const phone = document.getElementById('f-phone').value.trim();
+
+  let valid = true;
+
+  if (!name || name.split(' ').length < 2) { showError('err-name', true); valid = false; } else showError('err-name', false);
+  if (!school) { showError('err-school', true); valid = false; } else showError('err-school', false);
+  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showError('err-email', true); valid = false; } else showError('err-email', false);
+  if (!phone || phone.replace(/\D/g,'').length < 10) { showError('err-phone', true); valid = false; } else showError('err-phone', false);
+
+  if (!valid) return;
+
+  const btn = document.getElementById('signup-btn');
+  btn.disabled = true;
+  btn.textContent = 'Submitting…';
+
+  const entry = {
+    id: Date.now(),
+    name,
+    school,
+    email,
+    phone: formatPhone(phone),
+    timestamp: new Date().toISOString()
+  };
+
+  const ok = await saveSignup(entry);
+
+  if (ok) {
+    document.getElementById('signup-form-wrap').style.display = 'none';
+    const s = document.getElementById('signup-success');
+    s.style.display = 'flex';
+    document.getElementById('success-name').textContent = name.split(' ')[0];
+    document.getElementById('success-email').textContent = email;
+  } else {
+    btn.disabled = false;
+    btn.textContent = 'Join the Founding Cohort →';
+    alert('Something went wrong saving your info. Please try again.');
+  }
+}
+
+// ── Admin panel ──────────────────────────────────────────────────
+function openAdmin() {
+  loadAdmin();
+  document.getElementById('admin-panel').style.display = 'block';
+  document.body.style.overflow = 'hidden';
+}
+
+function closeAdmin() {
+  document.getElementById('admin-panel').style.display = 'none';
+  document.body.style.overflow = '';
+}
+
+async function loadAdmin() {
+  const signups = await getSignups();
+
+  // Stats
+  const schoolCounts = {};
+  signups.forEach(s => { schoolCounts[s.school] = (schoolCounts[s.school] || 0) + 1; });
+  const topSchool = Object.entries(schoolCounts).sort((a,b) => b[1]-a[1])[0];
+
+  document.getElementById('admin-stats').innerHTML = `
+    <div class="admin-stat">
+      <div class="admin-stat-num">${signups.length}</div>
+      <div class="admin-stat-label">Total Signups</div>
+    </div>
+    <div class="admin-stat">
+      <div class="admin-stat-num">${Object.keys(schoolCounts).length}</div>
+      <div class="admin-stat-label">Schools Represented</div>
+    </div>
+    <div class="admin-stat">
+      <div class="admin-stat-num">${topSchool ? topSchool[1] : 0}</div>
+      <div class="admin-stat-label">${topSchool ? topSchool[0].replace(' High School','').replace(' Pathways','') : '—'} (top school)</div>
+    </div>
+  `;
+
+  const tbody = document.getElementById('admin-tbody');
+  const empty = document.getElementById('admin-empty');
+
+  if (signups.length === 0) {
+    tbody.innerHTML = '';
+    empty.style.display = 'block';
+    return;
+  }
+
+  empty.style.display = 'none';
+  tbody.innerHTML = signups.map((s, i) => `
+    <tr>
+      <td style="color:var(--text-3);font-weight:700;">${i + 1}</td>
+      <td style="font-weight:700;">${escHtml(s.name)}</td>
+      <td><span class="school-badge">${escHtml(s.school)}</span></td>
+      <td style="color:var(--orange);">${escHtml(s.email)}</td>
+      <td>${escHtml(s.phone)}</td>
+      <td style="color:var(--text-3);font-size:12px;">${formatDate(s.timestamp)}</td>
+    </tr>
+  `).join('');
+}
+
+function escHtml(str) {
+  return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function formatDate(iso) {
+  const d = new Date(iso);
+  return d.toLocaleDateString('en-US', { month:'short', day:'numeric', year:'numeric' }) +
+         ' ' + d.toLocaleTimeString('en-US', { hour:'numeric', minute:'2-digit' });
+}
+
+async function exportCSV() {
+  const signups = await getSignups();
+  if (!signups.length) { alert('No signups to export yet.'); return; }
+
+  const header = ['#','Full Name','School','Email','Phone','Submitted'];
+  const rows = signups.map((s, i) => [
+    i + 1, s.name, s.school, s.email, s.phone, formatDate(s.timestamp)
+  ]);
+
+  const csv = [header, ...rows].map(r => r.map(c => `"${String(c).replace(/"/g,'""')}"`).join(',')).join('\n');
+  const blob = new Blob([csv], { type: 'text/csv' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = `linkteen-signups-${new Date().toISOString().slice(0,10)}.csv`;
+  a.click(); URL.revokeObjectURL(url);
+}
+
+async function clearAll() {
+  await window.storage.set(STORAGE_KEY, JSON.stringify([]), true);
+  loadAdmin();
+}
+
+// Keyboard shortcut: Ctrl+Shift+A opens admin
+document.addEventListener('keydown', e => {
+  if (e.ctrlKey && e.shiftKey && e.key === 'A') { e.preventDefault(); openAdmin(); }
+});
+
+// Click outside admin to close
+document.getElementById('admin-panel').addEventListener('click', function(e) {
+  if (e.target === this) closeAdmin();
+});
+
+// ── Scroll reveal ────────────────────────────────────────────────
 const io = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('v'); io.unobserve(e.target); } });
 }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
