@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LinkTeen</title>
+<title>Linkedteen</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
 
@@ -567,7 +567,7 @@ footer {
 <div id="admin-panel">
   <div class="admin-box">
     <div class="admin-header">
-      <h2>LinkTeen - Early Access Signups</h2>
+      <h2>LinkedTeen - Early Access Signups</h2>
       <button class="admin-close" onclick="closeAdmin()">×</button>
     </div>
     <div class="admin-body">
@@ -599,7 +599,7 @@ footer {
 
 <!-- NAV -->
 <nav>
-  <a href="#" class="nav-logo">LinkTeen</a>
+  <a href="#" class="nav-logo">LinkedTeen</a>
   <ul class="nav-links">
     <li><a href="#features">Features</a></li>
     <li><a href="#how">How it works</a></li>
@@ -614,7 +614,7 @@ footer {
 <section class="hero">
   <span class="hero-eyebrow" data-r>RJUHSD &middot; Roseville Rising</span>
   <h1 class="hero-title" data-r="1">Connect with students<br>who've been there.</h1>
-  <p class="hero-sub" data-r="2">LinkTeen puts you in interest-based communities with RJUHSD students who share your goals - so you discover real opportunities from people who've actually done them.</p>
+  <p class="hero-sub" data-r="2">LinkedTeen puts you in interest-based communities with RJUHSD students who share your goals - so you discover real opportunities from people who've actually done them.</p>
   <div class="hero-actions" data-r="3">
     <a href="#join" class="btn btn-grad">Request early access</a>
     <a href="#how" class="btn btn-outline">Learn how it works</a>
@@ -871,7 +871,7 @@ footer {
 <!-- CTA / SIGNUP -->
 <section class="cta" id="join">
   <h2 class="cta-title" data-r>Ready to find<br>your people?</h2>
-  <p class="cta-sub" data-r="1">LinkTeen is in early access for RJUHSD students. Sign up below to join the founding cohort before we open to the public.</p>
+  <p class="cta-sub" data-r="1">LinkedTeen is in early access for RJUHSD students. Sign up below to join the founding cohort before we open to the public.</p>
 
 
   <div class="signup-card" data-r="2">
@@ -939,7 +939,7 @@ footer {
     <div class="signup-success" id="signup-success">
       <div class="success-icon">🎉</div>
       <div class="success-title">You're on the list!</div>
-      <p class="success-sub">We'll reach out to <strong id="success-name"></strong> at <strong id="success-email"></strong> when LinkTeen opens for your school. Welcome to the founding cohort.</p>
+      <p class="success-sub">We'll reach out to <strong id="success-name"></strong> at <strong id="success-email"></strong> when LinkedTeen opens for your school. Welcome to the founding cohort.</p>
     </div>
   </div>
 
@@ -950,7 +950,7 @@ footer {
 
 <!-- FOOTER -->
 <footer>
-  <span class="footer-copy">© 2025 LinkTeen &middot; Built for Roseville Rising</span>
+  <span class="footer-copy">© 2025 LinkedTeen &middot; Built for Roseville Rising</span>
   <div class="footer-links">
     <a href="#">Privacy</a>
     <a href="#">Terms</a>
@@ -1159,7 +1159,7 @@ async function exportCSV() {
   const blob = new Blob([csv], { type: 'text/csv' });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
-  a.href = url; a.download = `linkteen-signups-${new Date().toISOString().slice(0,10)}.csv`;
+  a.href = url; a.download = `linkedteen-signups-${new Date().toISOString().slice(0,10)}.csv`;
   a.click(); URL.revokeObjectURL(url);
 }
 
